@@ -16,14 +16,11 @@ function App() {
   return (
       <BrowserRouter>
           <NavBar />
-          {/* <Routes>
-            <Route path='/' element={<ItemListContainer greeting="Electronics"/>}/>
-            <Route path='/detalle' element={<ItemDetailContainer/>}/>
-            
-          </Routes> */}
-          <ItemListContainer/>
-          <ItemDetailContainer/>
-
+          <Routes>
+            <Route path='/' element={<ItemListContainer/>}/>
+            <Route path='/category/:cid' element={<ItemListContainer/>}/>
+            <Route path='/detalle/:pid' element={<ItemDetailContainer/>}/>
+          </Routes>
       </BrowserRouter>
 	)
 }
